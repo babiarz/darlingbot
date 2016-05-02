@@ -15,36 +15,36 @@ module.exports = function(robot) {
 	})
 
 
-	// Cats
-	robot.hear(/cats/i, function(response) {
-		console.log(robot.brain.data.users)
-		var user = robot.brain.userForName()
-		var like = response.match[1]
-		response.reply(user.real_name + ', cats are so cute !')
-	})
+	// // Cats
+	// robot.hear(/cats/i, function(response) {
+	// 	console.log(robot.brain.data.users)
+	// 	var user = robot.brain.userForName()
+	// 	var like = response.match[1]
+	// 	response.reply(user.real_name + ', cats are so cute !')
+	// })
 
 
-	// What should I eat
+	// // What should I eat
 
-	robot.respond(/what should i eat\?/i, function(response) {
-		robot.brain.set(response.message.user.name, true)
-		response.send("Are you a vegetarian?")
-	})
+	// robot.respond(/what should i eat\?/i, function(response) {
+	// 	robot.brain.set(response.message.user.name, true)
+	// 	response.send("Are you a vegetarian?")
+	// })
 
-	robot.respond(/\b(yes|no)\b/i, function(response) {
-		if (robot.brain.get(response.message.user.name) !== true) {
-			return
-		}
-		var myvegFood = ['pasta', 'a cheese pizza', 'a spring roll', 'panang curry with tofu', 'a salad', 'a granola bar', 'chocolate cake', 'tacos']
-		var mymeatFood = ['a cheeseburger', 'a philly cheese steak', 'kung pao beef', 'some chicken tacos']
-		if (response.match[1] === 'yes') {
-			var vegFood = myvegFood[Math.floor(Math.random() * myvegFood.length)];
-			response.reply('You should eat ' + vegFood '.');
-		} else {
-			var meatFood = mymeatFood[Math.floor(Math.random() * mymeatFood.length)];
-			response.reply('You should eat ' + meatFood + '.');
-		}
+	// robot.respond(/\b(yes|no)\b/i, function(response) {
+	// 	if (robot.brain.get(response.message.user.name) !== true) {
+	// 		return
+	// 	}
+	// 	var myvegFood = ['pasta', 'a cheese pizza', 'a spring roll', 'panang curry with tofu', 'a salad', 'a granola bar', 'chocolate cake', 'tacos']
+	// 	var mymeatFood = ['a cheeseburger', 'a philly cheese steak', 'kung pao beef', 'some chicken tacos']
+	// 	if (response.match[1] === 'yes') {
+	// 		var vegFood = myvegFood[Math.floor(Math.random() * myvegFood.length)];
+	// 		response.reply('You should eat ' + vegFood '.');
+	// 	} else {
+	// 		var meatFood = mymeatFood[Math.floor(Math.random() * mymeatFood.length)];
+	// 		response.reply('You should eat ' + meatFood + '.');
+	// 	}
 
-	})
+	// })
 
 }
