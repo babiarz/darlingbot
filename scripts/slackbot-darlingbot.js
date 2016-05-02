@@ -11,7 +11,7 @@ module.exports = function(robot) {
 			'I cannot help you, for I’m just a cookie', 'The fortune you seek, is in another cookie'
 		];
 		var fortune = myFortune[Math.floor(Math.random() * myFortune.length)];
-		response.send("fortune")
+		response.send(fortune)
 	})
 
 
