@@ -37,7 +37,7 @@ module.exports = function(robot) {
  	var mymeatFood = ['a cheeseburger', 'a philly cheese steak', 'kung pao beef', 'some chicken tacos']
  	if (response.match[1] === 'yes') {
  		var vegFood = myvegFood[Math.floor(Math.random() * myvegFood.length)];
- 		response.reply('You should eat ' + vegFood '.');
+ 		response.reply('You should eat ' + vegFood + '.');
  	} else {
  		var meatFood = mymeatFood[Math.floor(Math.random() * mymeatFood.length)];
  		response.reply('You should eat ' + meatFood + '.');
