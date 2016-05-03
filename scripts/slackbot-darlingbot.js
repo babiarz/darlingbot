@@ -17,7 +17,8 @@ module.exports = function(robot) {
 
 	// Cats
 		robot.hear(/cats/i, function(response) {
-		response.reply('Cats are so cute !')
+		var user = robot.brain.userForName('jen')
+		response.send(user.real_name + ' ' + ',' + 'cats are so cute' + ' ' + '!')
 	})
 
 
