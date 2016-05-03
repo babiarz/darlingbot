@@ -33,8 +33,8 @@ module.exports = function(robot) {
 	if (robot.brain.get(response.message.user.name) !== true) {
  		return
  	}
- 	var myvegFood = ['pasta', 'a cheese pizza', 'a spring roll', 'panang curry with tofu', 'a salad', 'a granola bar', 'chocolate cake', 'tacos']
- 	var mymeatFood = ['a cheeseburger', 'a philly cheese steak', 'kung pao beef', 'some chicken tacos']
+ 	var myvegFood = ['pasta', 'a cheese pizza', 'a spring roll', 'panang curry with tofu', 'a salad', 'a peanut butter and jelly sandwich', 'tofurky', 'a veggie burger']
+ 	var mymeatFood = ['a cheeseburger', 'a philly cheese steak', 'kung pao beef', 'some chicken tacos', 'tuna casserole', 'spaghetti and meatballs', 'chicken nuggets', 'a steak dinner']
  	if (response.match[1] === 'yes') {
  		var vegFood = myvegFood[Math.floor(Math.random() * myvegFood.length)];
  		response.reply('You should eat ' + vegFood + '.');
